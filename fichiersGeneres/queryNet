@@ -1,0 +1,114 @@
+.I 1
+operating system for IBM computers?
+.I 2
+ I am interested in articles written either by Prieve or Udo Pooch
+prieve, b.
+pooch, u.
+.I 3
+ Intermediate languages used in construction of multi-targeted compilers; TCOLL
+.I 4
+ I'm interested in mechanisms for communicating between disjoint processes,
+possibly, but not exclusively, in a distributed environment.  I would
+rather see descriptions of complete mechanisms, with or without implementations,
+as opposed to theoretical work on the abstract problem.  remote procedure
+calls and message-passing are examples of my interests.
+.I 5
+ I'd like papers on design and implementation of editing interfaces,
+window-managers, command interpreters, etc.  the essential issues are
+human interface design, with views on improvements to user efficiency,
+effectiveness and satisfaction.
+.I 6
+ Interested in articles on robotics, motion planning particularly the
+dynamics of arm motion.
+.I 7
+ I am interested in distributed algorithms - concurrent programs in
+which processes communicate and synchronize by using message passing.
+areas of particular interest include fault-tolerance and techniques
+for understanding the correctness of these algorithms.
+.I 8
+network operating systems
+.I 9
+ security considerations in local networks, network operating systems,
+and distributed systems.
+.I 14
+ find all discussions of optimal implementations of sort algorithms for
+database management applications
+.I 15
+ find all discussions of horizontal microcode optimization with special
+emphasis on optimization of loops and global optimization.
+.I 16
+ find all descriptions of file handling in operating systems based on
+multiple processes and message passing.
+.I 19
+ parallel algorithms
+.I 20
+ graph theoretic algorithms applicable to sparse matrices
+.I 22
+ I am interested in hidden-line and hidden-surface algorithms for
+cylinders, toroids, spheres, and cones.  this is a rather specialized
+topic in computer graphics.
+.I 28
+algorithms for packet routing, and for dealing with changes in
+network topography.  I am not interested in the hardware used in the
+network.
+.I 37
+(e.g. what is the type of a process?  when is a synchronization attempt 
+between two processes "type correct"?  in a message-passing system is there
+any notion of the types of messages?--i.e. any way to check that the sender
+of the message and the receiver are both treating the bit stream as some
+particular type)
+.I 38
+Abstract Data Types here, but I'm not sure how to phrase this to avoid it.
+i'm interested in questions about how one can check that a module "matches"
+contexts in which it is used.)
+.I 39
+defined types?  (you might want to restrict this to "extensible" languages
+that allow definition of abstract data types or programmer-supplied
+definitions of operators like *, +.)
+.I 40
+ list all articles dealing with data types in the following languages:
+that are referenced frequently in papers on the above languages (e.g. catch
+any languages with interesting type structures that I might have missed).
+.I 42
+ computer performance evaluation techniques using pattern recognition
+and clustering.
+.I 43
+descriptions, shape recognition by computer.  two-dimensional shapes.
+measures of circularity.  shape matching.
+.I 44
+ texture analysis by computer.	digitized texture analysis.  texture
+synthesis. perception of texture.
+.I 45
+ the use of operations research models to optimize information system
+performance.  this includes fine tuning decisions such as secondary index
+selection, file reorganization, and distributed databases.
+.I 48
+ the use of computer science principles (e.g. data structures, 
+numerical methods) in generating optimization (e.g. linear programming)
+algorithms.  this includes issues of the khachian (russian, ellipsoidal)
+algorithm and complexity of such algorithms.
+.I 49
+ the role of information retrieval in knowledge based systems
+(i.e., expert systems).
+.I 57
+.I 58
+.I 59
+ dictionary construction and accessing methods for fast retrieval
+of words or lexical items or morphologically related information.
+hashing or indexing methods are usually applied to english spelling or
+natural language problems.
+.I 60
+ hardware and software relating to database management systems.
+database packages, back end computers, special associative hardware
+.I 61
+ Information retrieval articles by Gerard Salton or others about clustering,
+bibliographic coupling, use of citations or co-citations, the vector
+space model, boolean search methods using inverted files, feedback, etc.
+salton, g.
+.I 62
+uniform circuits).
+.I 63
+between parallel and sequential algorithms.
+.I 64
+ List all articles on EL1 and ECL (EL1 may be given as EL/1; I don't
+remember how they did it.
