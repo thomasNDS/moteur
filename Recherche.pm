@@ -7,6 +7,7 @@ use Similarite;
 use Requete;
 use Corpus;
 
+
 my @req = ();
 
 #Affiche des resusltats de requetes sous forme HTML
