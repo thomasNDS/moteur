@@ -13,7 +13,7 @@ sub evaluation {
 	my @docPertinent = ();
 
 	while ( defined( $line = <FQ> ) ) {
-		if ( $line =~ /([0-9]+) ([0-9]+) 0 0/ ) {
+		if ( $line =~ /([0-9]+) ([0-9]+)/ ) {
 			my $req = $1;
 			my $doc = $2;
 			if ( $reqCour == $req ) {
@@ -32,7 +32,7 @@ sub evaluation {
 					foreach my $k (@docPertinent) {
 						$nbpertinent++;
 						if ( $k == $key ) {
-							print " doc $k classé $classement.";
+							print " doc $k = $classement.";
 						}
 					}
 					$classement++;

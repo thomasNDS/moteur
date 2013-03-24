@@ -59,7 +59,7 @@ sub simililarite {
 	open( FINDEX, "<fichiersGeneres/index" ) or die "open: $!";
 
 	# pour chaque document:
-	while ( $numDoc<1000 && defined( $line = <FINDEX> ) ) {
+	while ( defined( $line = <FINDEX> ) ) {
 		$score = 0;
 
 		# pour chaque mot du document:
@@ -73,17 +73,18 @@ sub simililarite {
 
 				if ( $cR eq $cD ) {
 					$increment++;
-					$score = $score + $vR  * $vD * $increment;
+					$score = $score + $vR * $vD * $increment;
 				}
 			}
 		}
 		if ( $NormReq > 0 ) {
 			my $normDoc = Corpus::getNormeDoc($numDoc);
 
-			print "doc:$normDoc </br>";
+			#print "doc:$normDoc </br>";
 			if ( $normDoc > 0 ) {
-				$score = $score / ((1/10000)* ($NormReq) * $normDoc );
+				$score = $score / ( ( 1 / 10000 ) * ($NormReq) * $normDoc );
 			}
+			else { $score = -1; }
 			if ( $score > 0 ) {
 				$scoreDoc{$numDoc} = $score;
 			}

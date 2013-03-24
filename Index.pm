@@ -41,9 +41,9 @@ sub creationIndex {
 						$idf = log( $N / $df );
 					}
 					else {
-						$idf = 0.1;
+						$idf = 0.01;
 					}
-					if ( $idf < 1 ) { $idf = 0.1; }
+					if ( $idf < 1 ) { $idf = 0.01; }
 					my $ct = int( $tf * $idf );
 					print FINDEX "$word=$ct ";
 

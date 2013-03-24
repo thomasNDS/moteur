@@ -8,6 +8,7 @@ use Requete;
 use DocumentIndexable;
 use Corpus;
 use Recherche;
+use Index;
 
 	my $nbArg = 0;
 	my $req   = "";
