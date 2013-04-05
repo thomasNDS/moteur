@@ -1,0 +1,62 @@
+requete: 1 
+requete: 02 
+ doc 3078 = 75.requete: 03 
+ doc 2923 = 182. doc 1807 = 569. doc 2290 = 777.requete: 04 
+ doc 1749 = 131. doc 2371 = 280. doc 3128 = 314. doc 1811 = 379. doc 2912 = 408. doc 3073 = 418.requete: 05 
+requete: 06 
+requete: 07 
+ doc 1960 = 29. doc 2320 = 50. doc 3128 = 117. doc 2685 = 190. doc 2578 = 216. doc 2777 = 221. doc 2376 = 238. doc 3148 = 339. doc 2865 = 390. doc 2597 = 429. doc 2895 = 444.requete: 08 
+ doc 2625 = 36.requete: 09 
+requete: 10 
+requete: 11 
+requete: 12 
+requete: 13 
+ doc 1807 = 358. doc 1947 = 415.requete: 14 
+ doc 2337 = 30. doc 2397 = 74. doc 2017 = 119. doc 2716 = 125.requete: 15 
+ doc 2598 = 82. doc 2263 = 133. doc 2685 = 215. doc 1947 = 502.requete: 16 
+requete: 17 
+requete: 18 
+ doc 1811 = 233.requete: 19 
+ doc 2973 = 307.requete: 20 
+requete: 21 
+ doc 2189 = 139. doc 1847 = 219. doc 1429 = 235.requete: 22 
+requete: 23 
+requete: 24 
+requete: 25 
+requete: 26 
+requete: 27 
+ doc 2768 = 11. doc 2864 = 27. doc 2095 = 64.requete: 28 
+requete: 29 
+requete: 30 
+requete: 31 
+requete: 32 
+requete: 33 
+requete: 36 
+ doc 1683 = 79. doc 1265 = 117. doc 1768 = 244. doc 2084 = 338. doc 1825 = 374. doc 2836 = 703. doc 1836 = 710. doc 2179 = 780.requete: 37 
+ doc 2941 = 35. doc 3148 = 347. doc 2632 = 425. doc 2625 = 487.requete: 38 
+ doc 2941 = 14. doc 2957 = 28. doc 2958 = 31. doc 2940 = 83. doc 2960 = 182. doc 2265 = 197. doc 3150 = 204. doc 2868 = 309. doc 2651 = 418. doc 3103 = 520. doc 3031 = 525. doc 2632 = 622. doc 2625 = 652.requete: 39 
+ doc 1861 = 59. doc 2941 = 63. doc 2317 = 102. doc 3031 = 416. doc 2651 = 510. doc 2632 = 622. doc 2265 = 641.requete: 40 
+ doc 2148 = 580. doc 2941 = 609. doc 1614 = 780.requete: 42 
+ doc 1653 = 258. doc 0963 = 294. doc 1518 = 298. doc 1572 = 431. doc 1827 = 456. doc 2318 = 519. doc 2542 = 560. doc 2344 = 635. doc 3048 = 696.requete: 43 
+ doc 2826 = 7. doc 2004 = 73. doc 0462 = 77. doc 2523 = 110. doc 2924 = 138. doc 3047 = 310. doc 2195 = 334. doc 2754 = 452. doc 1113 = 504. doc 1554 = 514. doc 1325 = 605. doc 2828 = 750. doc 2751 = 761. doc 2829 = 765. doc 1686 = 783. doc 2811 = 795. doc 2211 = 813.requete: 44 
+ doc 3013 = 3. doc 2751 = 171. doc 2523 = 178. doc 2004 = 209. doc 2924 = 420. doc 2829 = 570.requete: 45 
+ doc 2900 = 49. doc 2878 = 149. doc 2452 = 161. doc 2716 = 216. doc 2257 = 377. doc 3137 = 397. doc 3168 = 452. doc 2882 = 506. doc 3152 = 578. doc 2969 = 802. doc 1831 = 838. doc 2680 = 968. doc 1935 = 984. doc 2964 = 1119. doc 2816 = 1123. doc 2359 = 1310. doc 2965 = 1382. doc 3002 = 1433. doc 3058 = 1495.requete: 48 
+ doc 1729 = 110. doc 1666 = 496.requete: 49 
+requete: 57 
+requete: 58 
+ doc 2731 = 84. doc 2115 = 434. doc 3167 = 478. doc 2249 = 518. doc 1812 = 607. doc 2634 = 647. doc 2098 = 686. doc 2395 = 693. doc 2122 = 764. doc 1293 = 855. doc 3166 = 979.requete: 59 
+ doc 2107 = 40. doc 2359 = 64. doc 2018 = 134. doc 2543 = 147. doc 2537 = 164. doc 1700 = 169. doc 3083 = 204. doc 1855 = 209. doc 2991 = 255. doc 3126 = 429. doc 3053 = 567. doc 1456 = 626. doc 2203 = 636. doc 2274 = 653. doc 1235 = 667. doc 1457 = 676.requete: 60 
+ doc 2452 = 5. doc 2817 = 192. doc 2882 = 280. doc 2960 = 337. doc 2716 = 468. doc 3087 = 519. doc 2717 = 574. doc 2710 = 660.requete: 61 
+ doc 2976 = 0.requete: 62 
+ doc 1811 = 243.requete: 63 
+ doc 3075 = 59.
+precision/rappel:
+ 0.2 = 0.143211080065542 
+  0.1 = 0.107554809366514 
+  0.7 = 0.0178571428571429 
+  0.3 = 0.113128825869142 
+  0 = 0.080038316649556 
+  0.6 = 0.0282189488698705 
+  0.4 = 0.0425682374967671 
+  0.5 = 0.0346980175658866 
+ 
