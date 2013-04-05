@@ -10,7 +10,7 @@ use strict;
 sub supprimerXN {
 	my ($filename) = @_;
 	open( FileO, "<$filename" )  or die "open: $!";
-	open( FileS, ">cacmSansXN" ) or die "Erreur ouverture cacmSansXN.";
+	open( FileS, ">fichiersGeneres/cacmSansXN" ) or die "Erreur ouverture cacmSansXN.";
 	my ( $text, $line, @words, $word );
 	$text = 0;
 
@@ -24,12 +24,14 @@ sub supprimerXN {
 			$text = 1;
 		}
 		else {
-			if ( $line =~ /.X/ || $line =~ /.N/ ) {    # .X, .N non pertinent.
+			if ( $line =~ /.X/ || $line =~ /.N/|| $line =~ /.C/ || $line =~ /.K/) {  
+			  # .X, .N,C,K non pertinent.
 				$text = 0;
 			}
 		}
 		if ( $text == 1 ) {
 			print FileS $line;
+			#print  $line;
 		}
 	}
 	close(FileO);
@@ -55,6 +57,39 @@ sub getNombreDeDocs {
 	close(FSEARCH);
 	return $nbDoc;
 }
+
+# Renvoi le texte associé à l'id avec décor HTML.
+# @param1 document.
+# @param2 Id
+# @return tableau du texte associé.
+sub trouverTexteIdColor {
+	my ( $filename, $id ) = @_;
+	open( FSEARCH, "<$filename" ) or die "open: $!";
+	my ( $line, @words, $word, $numeroDoc );
+	$numeroDoc = 0;
+	my $auteur= 0;
+	while ( !( $numeroDoc == $id + 1 ) && defined( $line = <FSEARCH> ) ) {
+		# On obtient le numéro.
+		if ( $line =~ /(.I +([0123456789\.]+))/ ) {
+			$numeroDoc = $2;
+		}
+		if ($line =~ /\.A /) {$auteur=1;}
+		if ($line =~ /\.[TXNBW]+/) {$auteur=0;}
+		else {
+			# On affiche le contenu si pas de balise.
+			if ( $numeroDoc == $id && !( $line =~ /\.[TXNBAIW]+/ ) ) {
+			    if ($auteur==1){
+			        $words[ $#words + 1 ] = "<b></br> $line</b>";
+			    }else{
+				$words[ $#words + 1 ] = $line;
+			    }
+			}
+		}
+	}
+	close(FSEARCH);
+	return @words;
+}
+
 
 # Renvoi le texte associé à l'id.
 # @param1 document.

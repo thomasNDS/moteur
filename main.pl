@@ -9,15 +9,40 @@ use DocumentIndexable;
 use Corpus;
 use Recherche;
 use Index;
+use Evaluation;
 
-	my $nbArg = 0;
-	my $req   = "";
-	while ( defined( $ARGV[$nbArg] ) ) {
-		$req = $req . " " . $ARGV[$nbArg];
-		$nbArg++;
+# perl main.pl TEXTE ma recherche
+# perl main.pl EVALUATION
+# perl main.pl DOC 451
+
+my $nbArg = 2;
+my $req   = "";
+my $nbReq = 0;
+while ( defined( $ARGV[$nbArg] ) ) {
+	$req = $req . " " . $ARGV[$nbArg];
+	$nbArg++;
+}
+if ( defined( $ARGV[0] ) ) {
+	if ( defined( $ARGV[1] ) && $ARGV[0] eq "TEXTE" ) {
+		$nbReq= $ARGV[1];
+		Recherche::recherche($req,$nbReq);
 	}
-	print "</br> <b>La requete:</b> $req</br>";
-	Recherche::recherche($req);
+	else {
+	  if ( $ARGV[0] eq "EVALUATION"){
+		Evaluation::evaluation();
+	  }else{
+		if (defined( $ARGV[1] ) && $ARGV[0] eq "DOC"){
+		  print "<dd><h2> Document $ARGV[1]:\n</h2></dd>";
+		  print "<div style=\"width:60%;text-align:justify; margin-left:100px;\">";
+		  my @mots =Corpus::trouverTexteIdColor( "fichiersGeneres/cacmSansXN", $ARGV[1] );
+		  foreach my $word (@mots) {
+		      print "$word ";
+		  }
+		  print "</div>";
+		}
+	  }
+	}
+}
 
 #print "start \n";
 #Requete::genererQueryNetoyees();

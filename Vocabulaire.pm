@@ -23,7 +23,7 @@ sub vocabulaire {
 			}
 			%finalWords =();
 		}
-		if ( !( $line =~ /\.[TAWBI] / ) ) {
+		if ( !( $line =~ /\.[TAWBIKC] / ) ) {
 
 			# uniquement caractère alphanumérique.
 			@words = split( /\W+/, $line );

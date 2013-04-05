@@ -56,7 +56,7 @@ sub creationIndex {
 		else {
 
 			# On affiche le contenu si pas de balise.
-			if ( !( $line =~ /\.[TXNBAW]+/ ) ) {
+			if ( !( $line =~ /\.[TXNBAWKC]+/ ) ) {
 				$words[ $#words + 1 ] = $line;
 
 				# uniquement caractère alphanumérique.

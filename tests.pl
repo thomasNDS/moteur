@@ -54,7 +54,8 @@ sub testgetQuery {
 }
 
 print "start \n";
-Evaluation::evaluation();
-print "fin";
+#Evaluation::evaluation();
+Corpus::supprimerXN("cacm/cacm.all");
+print "fin\n";
 1;
 

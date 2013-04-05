@@ -44,7 +44,7 @@ sub genererNormeIndex {
 # 	| s[i] <-0
 # 	Pour j de 1 à  à Nombre de caractéristiques associées à i:
 # 		| Si le terme associé à c(x,j) apparait dans la requête Q
-# 			| s[i] <- s[i] + c(ti,di) * c(ti,Q)
+# 			| s[i] <- s[i] + c(ti,di) * c(ti,Q)'
 # 	s[i] <- s[i] / (Normq * z[i])
 
 # @param la requete $.
@@ -52,6 +52,7 @@ sub genererNormeIndex {
 sub simililarite {
 	my ($requete) = @_;
 	my $NormReq   = calculerNormeLigne($requete);
+
 	my %indexReq  = DocumentIndexable::indexVersHash($requete);
 	my ( $line, $cR, $vR, $cD, $vD, %scoreDoc );
 	my $numDoc = 1;
@@ -63,7 +64,7 @@ sub simililarite {
 		$score = 0;
 
 		# pour chaque mot du document:
-		my $increment = 0;
+		my $increment = 1;
 		my %indexDoc  = DocumentIndexable::indexVersHash($line);
 		while ( ( $cD, $vD ) = each(%indexDoc) ) {
 
@@ -73,7 +74,7 @@ sub simililarite {
 
 				if ( $cR eq $cD ) {
 					$increment++;
-					$score = $score + $vR * $vD * $increment;
+					$score = $score + $vR * $vD * $increment+0.1;
 				}
 			}
 		}
@@ -84,12 +85,13 @@ sub simililarite {
 			if ( $normDoc > 0 ) {
 				$score = $score / ( ( 1 / 10000 ) * ($NormReq) * $normDoc );
 			}
-			else { $score = -1; }
+			else { 
+				$score = -1; 
+			}
 			if ( $score > 0 ) {
 				$scoreDoc{$numDoc} = $score;
 			}
 		}
-
 		$numDoc++;
 	}
 
